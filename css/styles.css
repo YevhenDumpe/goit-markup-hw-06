@@ -418,7 +418,7 @@ margin-bottom: 72px;
     
 }
 
-.team-soc-link:hover, :focus {
+.team-soc-link:is(:hover, :focus) {
  background-color: var(--color-ocean);
 }
 
@@ -706,8 +706,8 @@ margin-left: 120px;
 }
 /*--Footer-Subscribe--*/
 
-.conteiner-email {
-    margin-left: 80px;
+.container-email {
+    margin-left: auto;
   }
   .subscribe-text {
     display: block;
@@ -773,8 +773,7 @@ margin-left: 120px;
     border: none;
     transition: background-color var(--transition-func);
   }
-  .email-btn:focus,
-  .email-btn:hover {
+  .email-btn:is(:hover, :focus) {
     background-color: var(--color-ocean);
   }
   
@@ -794,8 +793,7 @@ margin-left: 120px;
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px; 
+    width: 408px; 
     background-color: #fcfcfc;
     border-radius: 4px;
     position: absolute;
@@ -803,7 +801,7 @@ margin-left: 120px;
     left: 50%;
     transform: translate(-50%, -50%) scaleY(1);
     transition: transform 300ms linear;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 24px 24px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -823,7 +821,7 @@ margin-left: 120px;
     transition: background-color var(--transition-func), fill var(--transition-func);
 }
 
-.modal-close:is(:hover,:focus){
+.modal-close:is(:hover, :focus){
     background-color: var(--color-ocean);
     fill: var(--main-title-color)
 }
@@ -935,9 +933,6 @@ margin-left: 120px;
   }
 
   .form-modal {
-        display: inline-block;
-    text-align: start;
-    width: 100%;
   }
   
   .form-btn {
